@@ -1,0 +1,4 @@
+ProductID,ProductName,Description,Price,Category
+223,Laptop,Powerful laptop for all your computing needs,1200,Electronics
+442,Keyboard,High-quality keyboard for seamless typing experience,150,Electronics
+452,Personal Guide,Inspirational book for personal development,20,Books

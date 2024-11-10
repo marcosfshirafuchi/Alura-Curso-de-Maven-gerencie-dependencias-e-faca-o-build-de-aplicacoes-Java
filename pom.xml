@@ -13,5 +13,27 @@
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
-</project>
+    <!--  Adicione a biblioteca LibreTranslate-Java em seu projeto; -->
+    <!-- Repository -->
+    <repositories>
+        <repository>
+            <id>dynomakeRepository</id>
+            <url>https://maven.dynomake.space/releases</url>
+        </repository>
+      </repositories>
+      <dependencies>
+          <!-- Adicione a biblioteca OpenCSV -->
+          <!-- https://mvnrepository.com/artifact/com.opencsv/opencsv -->
+        <dependency>
+            <groupId>com.opencsv</groupId>
+            <artifactId>opencsv</artifactId>
+            <version>5.9</version>
+        </dependency>
+          <!-- Dependency -->
+        <dependency>
+            <groupId>space.dynomake</groupId>
+            <artifactId>libretranslate-java</artifactId>
+            <version>1.0.9</version>
+        </dependency>
+           </dependencies>
+       </project>
