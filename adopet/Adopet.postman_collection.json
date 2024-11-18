@@ -1,0 +1,241 @@
+{
+	"info": {
+		"_postman_id": "86e4d991-89ec-4254-8d75-0fae3a437900",
+		"name": "Adopet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24023775",
+		"_collection_link": "https://lunar-zodiac-751954.postman.co/workspace/Curso-Java~21b70493-c335-46b5-97a7-870f5f9dce9e/collection/24023775-86e4d991-89ec-4254-8d75-0fae3a437900?action=share&source=collection_link&creator=24023775"
+	},
+	"item": [
+		{
+			"name": "Pet",
+			"item": [
+				{
+					"name": "Cadastrar Pet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "imagem",
+									"contentType": "multipart/form-data",
+									"type": "file",
+									"src": "/home/vinicius/Área de Trabalho/gravacao/exceptions-java-ensaio/gato.jpg"
+								},
+								{
+									"key": "dados",
+									"value": "{\"nome\": \"Lua\",\"idade\": 5,\"tipo\": \"GATO\",\"porte\": \"MEDIO\"}",
+									"contentType": "application/json",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/pets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar todos os Pets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pets"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tutor",
+			"item": [
+				{
+					"name": "Buscar todos os Tutores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/tutor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tutor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar Tutor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Vinicius Louzada\",\n    \"email\": \"email@example.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/tutor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tutor"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Adoção",
+			"item": [
+				{
+					"name": "Buscar todas as adoções",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/adocao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"adocao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Solicitar Adoção",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"idPet\": 1,\n    \"idTutor\": 1,\n    \"motivo\": \"Um motivo qualquer\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/adocao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"adocao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Aprovar Adoção",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"idAdocao\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/adocao/aprovar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"adocao",
+								"aprovar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reprovar Adoção",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"idAdocao\": 1,\n    \"justificativa\": \"Alguma justificativa qualquer!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/adocao/reprovar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"adocao",
+								"reprovar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar uma adoção",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
