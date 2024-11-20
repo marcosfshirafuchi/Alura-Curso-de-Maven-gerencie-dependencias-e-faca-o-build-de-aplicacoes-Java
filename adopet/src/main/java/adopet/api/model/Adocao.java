@@ -1,6 +1,5 @@
 package adopet.api.model;
 
-import adopet.api.dto.SolicitacaoDeAdocaoDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
